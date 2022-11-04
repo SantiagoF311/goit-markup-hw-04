@@ -228,7 +228,7 @@ div > .container {
 
 .frst-seccion {
     display: flex;
-    background-image: url(./images/17.jpg);
+    background-image: url(./../images/17.jpg);
     height: 600px;
     justify-content: center;
     align-items: center;
