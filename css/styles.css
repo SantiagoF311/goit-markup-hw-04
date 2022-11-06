@@ -53,6 +53,10 @@ div > .container {
     margin-right: 25px;
 }
 
+.nav-link-1:hover {
+    color: var(--color-hover);
+}
+
 .nav-addres {
     display: flex;
     align-items: center;
@@ -207,8 +211,6 @@ div > .container {
     width: 100%;
     border-radius: 1%;
 }
-
-
 
 
 /* Header */
