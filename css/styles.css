@@ -38,10 +38,15 @@ div > .container {
 }
 
 .nav-link {
-    margin-left: 68px;
+    position: relative;
+    margin-left: 53px;
     margin-right: 290px;
 }
+
+
+
 .nav-link-1 {
+    
     color: var(--color-general);
     text-decoration: none;
     font-style: normal;
@@ -49,12 +54,33 @@ div > .container {
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0.02em;
-    margin-left: 25px;
-    margin-right: 25px;
+    margin-right: 50px;
 }
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.active {
+    position: relative;
+}
+
+ .active::after {
+     content: "";
+     display: block;
+     position: absolute;
+     width: 100%;
+     height: 4px;
+     background: #2196F3;
+     border-radius: 2px;
+     top: 44.8px;
+ } 
 
 .nav-link-1:hover {
     color: var(--color-hover);
+    transition: .2s;
 }
 
 .nav-addres {
@@ -86,8 +112,6 @@ div > .container {
     height: 16px;
     fill: var(--color-secundario);
 }
-
-
 
 .nav-mail-tel {
     color: var(--color-secundario);
@@ -157,6 +181,37 @@ div > .container {
 }
 
 
+.is-hidden {
+    visibility: hidden;
+}
+
+.backdrop {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: #00000060;
+    z-index: 100;
+}
+
+.close-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin-left: 490px;
+    margin-top: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+.modal {
+    background: white;
+    width: 528px;
+    height: 581px;
+    margin: 150px auto;
+}
 
 .button {
     background-color: var(--color-botones);
@@ -347,6 +402,29 @@ div > .container {
 
 .whatwedo-subtitle {
     margin-bottom: 60px;
+}
+
+.whatwedo-inf {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1399px;
+    width: 370px;
+    height: 70px;
+    background: rgba(47, 48, 58, 0.8);
+}
+
+.whatwedo-inf-p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--color-p);
 }
 
 .subtitle {
@@ -749,6 +827,7 @@ div > .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    
 }
 
 .portafolio-button-hover:hover {
@@ -769,7 +848,7 @@ div > .container {
     transition: .3s;
 }
 
-.portfolio-img-container div {
+.portfolio-img-container .portafolio-img {
     width: 370px;
     height: 404px;
     left: 215px;
@@ -786,6 +865,46 @@ div > .container {
 .portafolio-img:hover {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
+.portafolio-img:hover .card-animation {
+    transform: translateY(0%);
+    transition: 250ms;
+}
+
+.card-img {
+    position: relative;
+    width: 370px;
+    height: 294px;
+    overflow: hidden;
+}
+
+
+.card-animation {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 294px;
+  margin: 0;
+  top: 0px;
+  left: 0px;
+  background: rgba(33, 150, 243, 0.9);;
+  transform: translatey(105%);
+}
+
+.card-animation-p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    padding-left: 12px;
+}
+
+
 
 
 
